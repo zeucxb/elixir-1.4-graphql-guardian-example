@@ -5,7 +5,7 @@ defmodule SecretCrewWeb.Types.Viewer do
   # import_types SecretCrewWeb.Types.Post
 
   object :viewer do
-    field :users, list_of(:user), resolve: &SecretCrewWeb.UserResolver.all/2
+    field :users, list_of(:user), resolve: &SecretCrewWeb.UserResolver.all/3
     # field :posts, list_of(:post), resolve: &SecretCrew.Feed.PostResolver.all/2
   end
 end
