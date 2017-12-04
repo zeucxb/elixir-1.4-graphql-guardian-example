@@ -1,4 +1,4 @@
-defmodule SecretCrew.Account.UserResolver do
+defmodule SecretCrewWeb.UserResolver do
   alias SecretCrew.Account
 
   def all(_args, _info) do

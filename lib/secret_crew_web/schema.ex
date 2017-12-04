@@ -4,9 +4,9 @@ defmodule SecretCrewWeb.Schema do
 
   query do
     field :viewer, :viewer do
-      resolve fn _, _ ->
-        {:ok, %{}}
-      end
+      arg :token, non_null(:string)
+
+      resolve &SecretCrewWeb.ViewerResolver.main/2
     end
   end
 end

@@ -37,11 +37,6 @@ config :secret_crew, SecretCrew.Auth,
   issuer: "s3Cr3t_CreW",
   secret_key: "Fidv/mjydodflvVUW2xo5z3y9CtEr+D2oQOapSKILm+aw88Jr/PhuRymoZyfWfqm"
 
-# Guardian pipeline
-config :secret_crew, SecretCrew.Auth.Pipeline,
-  module: SecretCrew.Auth,
-  error_handler: SecretCrew.Auth.ErrorHandler
-
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
